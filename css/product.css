@@ -1,3 +1,4 @@
+/*   header css start  */
 *{
     margin: 0;
     padding: 0;
@@ -66,46 +67,28 @@ a:hover{
 .dropdown:hover .dropdown-menu {
     display: block;
 }
-/*slider*/
-.carousel-caption {
-    Background:rgba(0,0,0,0.5);
-    top: 230px;
-    bottom: 65px;
-    left: 910px;
-    width: 300px;
-    Padding: 20px 25px 0 25px;
-    Color:white;
-    text-align: justify;
+
+/*   header css end  */
+
+/*   Breadcrumb css start  */
+
+
+#Breadcrumb, .breadcrumb{
+    background: #2e3e4e;
+    font-family: 'Open Sans',Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 18px 0 8px 0;
 }
-.carousel-caption h5{
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0 0 10px 0;
-}
-.carousel-caption p{
+#Breadcrumb, .breadcrumb .active{
+    color: white;
     font-size: 15px;
-    margin: 20px 0 10px 0;
+    font-weight: 300;
 }
 
 
-.carousel-indicators li{
-    width: 10px;
-   height: 10px;
-   border-radius: 15%;
-   background: #303030;
-}
-.carousel-indicators li:hover{
-   background: #0cbaa4;
-   
-}
-.carousel-indicators li:active{
-    background: #0cbaa4;
- }
- .carousel-control-prev-icon, .carousel-control-next-icon:hover{
-     color: #303030;
- }
-/*footer*/
+/*   Breadcrumb css end  */
+
 /*   Footer css start  */
 
 
@@ -125,7 +108,7 @@ h4{
     color: #fff;
     font-size: 18px;
 }
-.strong{
+strong{
     font-size: 14px;
     font-weight: bold;
     color: white;
@@ -182,121 +165,32 @@ ul li{
 
 
 /*   Footer css end  */
-/* cantact us page*/
 
-/* Breadcrumb */
-#Breadcrumb, .breadcrumb{
-    background: #2e3e4e;
-    font-family: 'Open Sans',Arial,sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    padding: 18px 0 8px 0;
-}
-#Breadcrumb, .breadcrumb .active{
-    color: white;
-    font-size: 15px;
-    font-weight: 300;
-}
-/* Breadcrumb syling end*/
-#contact-content{
-    margin: 150px 0 20px 0 ;
-}
-.h4-text{
-    color: #0cbaa4;
+
+/*   product css start  */
+
+
+.products-h3{
+	border: 0px;
+    margin: 20px  0 20px 0px ;
+    padding: 0px;
+    font-size: 24px;
+    color: rgb(45, 45, 45);
+    font-family: Lato, sans-serif;
+    text-align: start;
     
 }
-form , .address{
-    padding: 0 0 0 0;
-}
-.form-control{
-    font-family: 'Open Sans',Arial,sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    color: #656565;
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 1px;
-}
 
-p {
-    margin: 0 0 10px;
-}
-address {
-    margin-bottom: 20px;
-    font-style: normal;
-    line-height: 1.428571429;
-}
-address .fa,  p .fa {
-    padding: 12px 10px;
-    width: 40px;
-    height: 40px;
-    display: block;
-    float: left;
-    margin-right: 10px;
-    background: #0cbaa4;
-    color: #fff;
-    text-align: center;
-}
-b, strong {
-    font-weight: bold;
-  
-    font-size: 14px;
-  
-    line-height: 1.6em;
-    color: #656565;
-}
-
-address, p{
+.post-image-txt2{
     font-family: 'Open Sans',Arial,sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 1.6em;
     color: #656565;
-}
-
-.address{
-    background: #f5f5f5;
-    padding: 30px;
-    margin: 10px 10px 10px 20px ;
-}
-.form{
-    padding: 10px 50px 10px 10px;   
-}
-.btn-contact{
-    background: #0cbaa4;
-    color: #fff;
-}
-.btn-contact:hover{
-    color: black;
-    background: #fff;
-}
-
-/*about pag*/
-
-.about-text p,ol{ 
-    text-align: justify;
-    margin: 20px 0 20px 0;
-    font-weight: 700;
-    color: #333;
-     font-family: 'Open Sans',Arial,sans-serif; 
-    font-size: 15px;
-    color: rgb(45, 45, 45);
     text-align: start;
 }
-ol{
-    padding: 0 0 0 15px;
-}
-article{
-    margin: 40px 0 40px 0;
-}
-.about-image-heading h1{
-    font-size: 36px;
-    font-family: 'Open Sans',Arial,sans-serif;
-    font-weight: 700;
-    line-height: 1.1em;
-    color: #333;
-    margin: 20px 0 20px 0;
-}
+/*   product css end  */
+
 
 .bottom-about ul li{
     display: inline;
@@ -352,3 +246,43 @@ article{
     background: #cb2027;
     color: white;
   }
+
+  /*   product css end  */
+
+  .cat-list{
+    color: #656565;
+    font-family: 'Open Sans',Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+.pull-left {
+   
+    margin: 0 15px 15px 0;
+    width: 400px;
+    height: 200px;
+}
+.text-h6{
+    margin: 0 0 10px 0;
+    font-family: 'Open Sans',Arial,sans-serif;
+    font-weight: 700;
+    line-height: 1.1em;
+    color: #333;
+}
+.search-form{
+    font-family: 'Open Sans',Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #656565;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 1px;
+    height: 30px;
+    
+}
+.btn-theme{
+    
+    border-radius: 2px;
+    position: relative;
+    font-size: 0;
+}
