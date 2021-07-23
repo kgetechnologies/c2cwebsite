@@ -178,9 +178,15 @@ ul li{
     color: rgb(45, 45, 45);
     font-family: Lato, sans-serif;
     text-align: start;
+    font-weight: bold;
     
 }
-
+.products-h3:hover{
+	
+    color: #0cbaa4;
+    
+    
+}
 .post-image-txt2{
     font-family: 'Open Sans',Arial,sans-serif;
     font-size: 14px;
@@ -285,4 +291,14 @@ ul li{
     border-radius: 2px;
     position: relative;
     font-size: 0;
+}
+.text-h6{
+    color: #353535;
+    font-size: 16px;
+    font-weight: 600;
+}
+.text-h6:hover{
+    color: #0cbaa4;
+    font-size: 16px;
+    font-weight: 600;
 }
