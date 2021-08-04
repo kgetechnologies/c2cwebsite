@@ -1,158 +1,357 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-
-  <!-- CSS only -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
-</head>
 <style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    font-size: 14px;
+}
 
-  *{
+img {
+    max-width: 100%;
+}
 
-    width:400px;
-    text-align:center;
+body {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    width: 100% !important;
+    height: 100%;
+    line-height: 1.6;
+}
 
+table td {
+    vertical-align: top;
+}
 
-  }
-  .card {
+body {
+    background-color: #f6f6f6;
+}
 
-padding:0 20px 20px 430px;
-    border-radius: 6px;
-border-color: white;
-    display: inline-block;
+.body-wrap {
+    background-color: #f6f6f6;
+    width: 100%;
+}
+
+.container {
+    display: block !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+
+    clear: both !important;
+}
+
+.content {
+    max-width: 600px;
     margin: 0 auto;
-  }
-.top{
-  text-align:center;
-  color: black;
-  top:50px;
-  padding: 3px 23px 23px 23px;
+    display: block;
+    padding: 20px;
 }
-.summ{
-  left: 70px;
+
+
+.main {
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 3px;
 }
-.first{
-  text-align:center;
-  color: black;
-  border-radius:7px;
-  top:50px;
-background-size: 40px 80px;
-  background-color: lightgrey;
+
+.content-wrap {
+    padding: 20px;
 }
-.last{
-border-radius:7px;
-    text-align:center;
 
-    top:80px;
-border-radius:7px;
-background: grey;
-  background-size: 40px 80px;
-
-    background-color: lightgrey;
+.content-block {
+    padding: 0 0 20px;
 }
-.email{
-  text-align:center;
-border-radius:7px;
-  top:80px;
 
-background: grey;
-background-size: 40px 80px;
-
-  background-color: lightgrey;
+.header {
+    width: 100%;
+    margin-bottom: 20px;
 }
-.mob{
-  text-align:center;
-border-radius:7px;
-  top:80px;
 
-background: grey;
-background-size: 40px 80px;
-
-  background-color: lightgrey;
+.footer {
+    width: 100%;
+    clear: both;
+    color: #999;
+    padding: 20px;
 }
-.status{
-  text-align:center;
-border-radius:7px;
-  top:80px;
-
-background: Limegreen;
-background-size: 40px 80px;
-
-  background-color: Limegreen;
+.footer a {
+    color: #999;
 }
-.note{
-  text-align:center;
-left:50px;
-  top:80px;
-
-background: lightgrey;
-background-size: 40px 80px;
-border-radius:7px;
-  background-color: lightgrey;
+.footer p, .footer a, .footer unsubscribe, .footer td {
+    font-size: 12px;
 }
-  </style>
-<body>
-<div class="card">
-<div class="top">
-  <h3><b>Dear Vendor $CompanyName$</b></h3><br>
-  <p>Your Customer $FullName$ payment of ₹ <br>$Amount$<b> <span style ="color:chartreuse">successfully</span>.</b>
-     Transaction ID is<i> <b>$RequestId$</b></i></p><br>
-     <b><p class="summ">Customer Summary</p></b>
-</div>
-<div class="first">
-  <p><b> First Name :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$First name$</p>
-</div>
-<div class="last">
-  <p><b> Last Name :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Last name$</p>
-</div>
-<div class="email">
-  <p><b> Email Address :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Email Address$</p>
-</div>
-<div class="mob">
-  <p><b> Mobile Number :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Mobile Number$</p>
-</div>
-<div class="note">
-  <p><br>
-    <b> Customer Note :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Customer Note$</p><br>
-</div><br>
- <b><h3 class="bot">Transaction Summary</h3></b>
- <br>
- <div class="first">
-   <p><b> Order Id :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Request id$</p>
- </div>
- <div class="first">
-   <p><b> Bank ref no. :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$bank_ref_no$</p>
- </div>
- <div class="first">
-   <p><b> Card Name :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$card name$</p>
- </div>
- <div class="first">
-   <p><b> Payment Mode :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Payment_mode:$</p>
- </div>
- <div class="last">
-   <p><b> Request Amount :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Request_amount$</p>
- </div>
- <div class="email">
-   <p><b> Amount Paid :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Amount_paid$</p>
- </div>
- <div class="status">
-   <p>
-     <br><b> Payment Status :</b>&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp$Successful$</p>
- <br></div> <br>
- <br>
- <br>
-</div>
-</body>
+
+h1, h2, h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: #000;
+    margin: 40px 0 0;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+p, ul, ol {
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+p li, ul li, ol li {
+    margin-left: 5px;
+    list-style-position: inside;
+}
+
+a {
+    color: #1ab394;
+    text-decoration: underline;
+}
+
+.btn-primary {
+    text-decoration: none;
+    color: #FFF;
+    background-color: #1ab394;
+    border: solid #1ab394;
+    border-width: 5px 10px;
+    line-height: 2;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+
+.last {
+    margin-bottom: 0;
+}
+
+.first {
+    margin-top: 0;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+.alignright {
+    text-align: right;
+}
+
+.alignleft {
+    text-align: left;
+}
+
+.clear {
+    clear: both;
+}
+
+
+.alert {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    padding: 20px;
+    text-align: center;
+    border-radius: 3px 3px 0 0;
+}
+.alert a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+.alert.alert-warning {
+    background: #f8ac59;
+}
+.alert.alert-bad {
+    background: #ed5565;
+}
+.alert.alert-good {
+    background: #1ab394;
+}
+
+.invoice {
+    margin: 40px auto;
+    text-align: left;
+    width: 80%;
+}
+.invoice td {
+    padding: 5px 0;
+}
+.invoice .invoice-items {
+    width: 100%;
+}
+.invoice .invoice-items td {
+    border-top: #eee 1px solid;
+}
+.invoice .invoice-items .total td {
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    font-weight: 700;
+}
+
+
+@media only screen and (max-width: 640px) {
+    h1, h2, h3, h4 {
+        font-weight: 600 !important;
+        margin: 20px 0 5px !important;
+    }
+
+    h1 {
+        font-size: 22px !important;
+    }
+
+    h2 {
+        font-size: 18px !important;
+    }
+
+    h3 {
+        font-size: 16px !important;
+    }
+
+    .container {
+        width: 100% !important;
+    }
+
+    .content, .content-wrap {
+        padding: 10px !important;
+    }
+
+    .invoice {
+        width: 100% !important;
+    }
+}
+</style>
+
+<table class="body-wrap">
+    <tbody><tr>
+        <td></td>
+        <td class="container" width="600">
+            <div class="content">
+                <table class="main" width="100%" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                        <td class="content-wrap aligncenter">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tbody><tr>
+                                    <td class="content-block">
+                                        <h2>Dear Vendor
+                                        $CompanyName$</h2><br>
+
+                                        <p>Your Customer $FullName$ payment of ₹ <br>$Amount$<b> <span style ="color:chartreuse">successfully</span>.</b>
+                                           Transaction ID is<i> <b>$RequestId$</b></i></p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-block">
+                                        <table class="invoice">
+                                            <tbody><tr>
+                                                <td><b>Customer Summary</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table class="invoice-items" cellpadding="0" cellspacing="0">
+                                                        <tbody><tr bgcolor="lightgrey">
+                                                            <td>First Name :</td>
+                                                            <td class="alignright">$First name$</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Last Name :</td>
+                                                            <td class="alignright">$Last name$</td>
+                                                        </tr>
+                                                        <tr bgcolor="lightgrey">
+                                                            <td>Email</td>
+                                                            <td class="alignright">$email</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mobile No:</td>
+                                                            <td class="alignright">$mobile no.$</td>
+                                                        </tr>
+                                                        <tr bgcolor="lightgrey">
+                                                            <td>Customer Note</td>
+                                                            <td class="alignright">$note$</td>
+                                                        </tr>
+
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-block">
+                                        <table class="invoice">
+                                            <tbody><tr>
+                                                <td><b>Transaction Summary</b></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <table class="invoice-items" cellpadding="0" cellspacing="0">
+                                                        <tbody><tr bgcolor="lightgrey">
+                                                            <td>Order ID :</td>
+                                                            <td class="alignright">$order id$</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bank Ref no. :</td>
+                                                            <td class="alignright">$bank ref no.$</td>
+                                                        </tr>
+                                                        <tr bgcolor="lightgrey">
+                                                            <td>Card Name</td>
+                                                            <td class="alignright">$card name</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Payment Mode</td>
+                                                            <td class="alignright">$payment mode$</td>
+                                                        </tr>
+                                                        <tr bgcolor="lightgrey">
+                                                            <td>Request Amount</td>
+                                                            <td class="alignright">$request amount$</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Amount Paid</td>
+                                                            <td class="alignright">$amount paid$</td>
+                                                        </tr>
+
+                                                        <tr bgcolor="Limegreen"class="Total">
+                                                            <td>Transaction Status</td>
+                                                            <td class="alignright">Successful </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+
+
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>
+                <div class="footer">
+                    <table width="100%">
+                        <tbody><tr>
+                            <td class="aligncenter content-block">Questions? Email <a href="mailto:">support@c2c.com</a></td>
+                        </tr>
+                    </tbody></table>
+                </div></div>
+        </td>
+        <td></td>
+    </tr>
+</tbody></table>
