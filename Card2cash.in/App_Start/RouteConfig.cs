@@ -12,6 +12,9 @@ namespace Card2cashin
 		public static void RegisterRoutes(RouteCollection routes)
 		{
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+			//routes.RouteExistingFiles = true;
+
+			routes.IgnoreRoute("");
 
 			routes.MapRoute(
 			name: "contact",
@@ -24,7 +27,11 @@ namespace Card2cashin
 			url: "about",
 			defaults: new { controller = "Home", action = "about", id = UrlParameter.Optional }
 		);
-
+			routes.MapRoute(
+			name: "state",
+			url: "{state}/{id}",
+			defaults: new { controller = "state", action = "Index", id = UrlParameter.Optional }
+		);
 
 			routes.MapRoute(
 				name: "Default",
