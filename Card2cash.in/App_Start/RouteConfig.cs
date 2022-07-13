@@ -30,7 +30,7 @@ namespace Card2cashin
 
 			routes.MapRoute(
 			name: "state",
-			url: "state/{id}",
+			url: "{id}",
 			defaults: new { controller = "state", action = "Index" }
 		);
 
