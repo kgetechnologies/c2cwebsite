@@ -9,9 +9,13 @@ namespace Card2cashin.Controllers
     public class StateController : Controller
     {
         // GET: State
+        [Route("state/{stateName=Tamil-Nadu}")]
         public ActionResult Index(string stateName)
         {
-            ViewBag.State = stateName;
+            
+            ViewBag.DisplayName = stateName?.Replace("-", " ");
+            ViewBag.LinkValue = stateName?.Replace(" ", "-");
+
             return View();
         }
     }

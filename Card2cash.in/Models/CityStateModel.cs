@@ -9,11 +9,10 @@ namespace Card2cashin.Models
 
     public class CityStateModel
     {
-        //Root myDeserializedClass = JsonConvert.DeserializeObject<List<Root>>(myJsonResponse);
+        //Root myDeserializedClass = JsonConvert.DeserializeObject<List<CityStateModel>>(myJsonResponse);
         public string name { get; set; }
         public string state_code { get; set; }
         public List<City> cities { get; set; }
     }
-
 
 }

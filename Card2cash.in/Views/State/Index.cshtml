@@ -1,6 +1,8 @@
 ﻿
 @{
 	ViewBag.Title = "Index";
+	var displayName = ViewBag.DisplayName;
+	var linkValue = ViewBag.LinkValue;
 }
 <div class="contact-page">
 	<section>
@@ -151,116 +153,24 @@
 					</ul>
 				</article>
 
+				<h5 class="widgetheading">Areas In My @displayName State</h5>
+				<div class="row">
+					@foreach (var eachState in Card2cashin.Helper.CitiesByStateName(linkValue))
+					{
+						<div class="col">
+							<a class="dropdown-item" href="@eachState.Key">@eachState.Value</a>
+						</div>
+					}
+				</div>
+
 				<h5 class="widgetheading">Servicing States</h5>
 				<div class="row">
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Andaman-and-Nicobar-Islands">Andaman and Nicobar Islands</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Andhra-Pradesh">Andhra Pradesh</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Arunachal-Pradesh">Arunachal Pradesh</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Assam">Assam</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Bihar">Bihar</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Chandigarh">Chandigarh</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Chhattisgarh">Chhattisgarh</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Dadra-and-Nagar-Haveli-and-Daman-and-Diu">Dadra and Nagar Haveli and Daman and Diu</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Delhi">Delhi</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Goa">Goa</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Gujarat">Gujarat</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Haryana">Haryana</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Himachal-Pradesh">Himachal Pradesh</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Jammu-and-Kashmir">Jammu and Kashmir</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Jharkhand">Jharkhand</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Karnataka">Karnataka</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Kerala">Kerala</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Ladakh">Ladakh</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Lakshadweep">Lakshadweep</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Madhya-Pradesh">Madhya Pradesh</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Maharashtra">Maharashtra</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Manipur">Manipur</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Meghalaya">Meghalaya</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Mizoram">Mizoram</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Nagaland">Nagaland</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Odisha">Odisha</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Puducherry">Puducherry</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Punjab">Punjab</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Rajasthan">Rajasthan</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Sikkim">Sikkim</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Tamil-Nadu">Tamil Nadu</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Telangana">Telangana</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Tripura">Tripura</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Uttar-Pradesh">Uttar Pradesh</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/Uttarakhand">Uttarakhand</a>
-					</div>
-					<div class="col">
-						<a class="dropdown-item" href="~/state/West-Bengal">West Bengal</a>
-					</div>
+					@foreach (var eachState in Card2cashin.Helper.States)
+					{
+						<div class="col">
+							<a class="dropdown-item" href="@eachState.Key">@eachState.Value</a>
+						</div>
+					}
 				</div>
 			</div>
 	</section>

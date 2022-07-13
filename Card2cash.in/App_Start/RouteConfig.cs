@@ -27,10 +27,11 @@ namespace Card2cashin
 			url: "about",
 			defaults: new { controller = "Home", action = "about", id = UrlParameter.Optional }
 		);
+
 			routes.MapRoute(
 			name: "state",
-			url: "{state}/{id}",
-			defaults: new { controller = "state", action = "Index", id = UrlParameter.Optional }
+			url: "state/{id}",
+			defaults: new { controller = "state", action = "Index" }
 		);
 
 			routes.MapRoute(
