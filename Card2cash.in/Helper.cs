@@ -6,6 +6,8 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
+using System.Runtime.Caching;
+using System.Collections;
 
 namespace Card2cashin
 {
@@ -16,54 +18,71 @@ namespace Card2cashin
 			get
 			{
 				var op = new Dictionary<string, String>();
-				op.Add("/state/Andaman-and-Nicobar-Islands", "Andaman and Nicobar Islands");
-				op.Add("/state/Andhra-Pradesh", "Andhra Pradesh");
-				op.Add("/state/Arunachal-Pradesh", "Arunachal Pradesh");
-				op.Add("/state/Assam", "Assam");
-				op.Add("/state/Bihar", "Bihar");
-				op.Add("/state/Chandigarh", "Chandigarh");
-				op.Add("/state/Chhattisgarh", "Chhattisgarh");
-				op.Add("/state/Dadra-and-Nagar-Haveli-and-Daman-and-Diu", "Dadra and Nagar Haveli and Daman and Diu");
-				op.Add("/state/Delhi", "Delhi");
-				op.Add("/state/Goa", "Goa");
-				op.Add("/state/Gujarat", "Gujarat");
-				op.Add("/state/Haryana", "Haryana");
-				op.Add("/state/Himachal-Pradesh", "Himachal Pradesh");
-				op.Add("/state/Jammu-and-Kashmir", "Jammu and Kashmir");
-				op.Add("/state/Jharkhand", "Jharkhand");
-				op.Add("/state/Karnataka", "Karnataka");
-				op.Add("/state/Kerala", "Kerala");
-				op.Add("/state/Ladakh", "Ladakh");
-				op.Add("/state/Lakshadweep", "Lakshadweep");
-				op.Add("/state/Madhya-Pradesh", "Madhya Pradesh");
-				op.Add("/state/Maharashtra", "Maharashtra");
-				op.Add("/state/Manipur", "Manipur");
-				op.Add("/state/Meghalaya", "Meghalaya");
-				op.Add("/state/Mizoram", "Mizoram");
-				op.Add("/state/Nagaland", "Nagaland");
-				op.Add("/state/Odisha", "Odisha");
-				op.Add("/state/Puducherry", "Puducherry");
-				op.Add("/state/Punjab", "Punjab");
-				op.Add("/state/Rajasthan", "Rajasthan");
-				op.Add("/state/Sikkim", "Sikkim");
-				op.Add("/state/Tamil-Nadu", "Tamil Nadu");
-				op.Add("/state/Telangana", "Telangana");
-				op.Add("/state/Tripura", "Tripura");
-				op.Add("/state/Uttar-Pradesh", "Uttar Pradesh");
-				op.Add("/state/Uttarakhand", "Uttarakhand");
-				op.Add("/state/West-Bengal", "West Bengal");
+				op.Add("Andaman-and-Nicobar-Islands", "Andaman and Nicobar Islands");
+				op.Add("Andhra-Pradesh", "Andhra Pradesh");
+				op.Add("Arunachal-Pradesh", "Arunachal Pradesh");
+				op.Add("Assam", "Assam");
+				op.Add("Bihar", "Bihar");
+				op.Add("Chandigarh", "Chandigarh");
+				op.Add("Chhattisgarh", "Chhattisgarh");
+				op.Add("Dadra-and-Nagar-Haveli-and-Daman-and-Diu", "Dadra and Nagar Haveli and Daman and Diu");
+				op.Add("Delhi", "Delhi");
+				op.Add("Goa", "Goa");
+				op.Add("Gujarat", "Gujarat");
+				op.Add("Haryana", "Haryana");
+				op.Add("Himachal-Pradesh", "Himachal Pradesh");
+				op.Add("Jammu-and-Kashmir", "Jammu and Kashmir");
+				op.Add("Jharkhand", "Jharkhand");
+				op.Add("Karnataka", "Karnataka");
+				op.Add("Kerala", "Kerala");
+				op.Add("Ladakh", "Ladakh");
+				op.Add("Lakshadweep", "Lakshadweep");
+				op.Add("Madhya-Pradesh", "Madhya Pradesh");
+				op.Add("Maharashtra", "Maharashtra");
+				op.Add("Manipur", "Manipur");
+				op.Add("Meghalaya", "Meghalaya");
+				op.Add("Mizoram", "Mizoram");
+				op.Add("Nagaland", "Nagaland");
+				op.Add("Odisha", "Odisha");
+				op.Add("Puducherry", "Puducherry");
+				op.Add("Punjab", "Punjab");
+				op.Add("Rajasthan", "Rajasthan");
+				op.Add("Sikkim", "Sikkim");
+				op.Add("Tamil-Nadu", "Tamil Nadu");
+				op.Add("Telangana", "Telangana");
+				op.Add("Tripura", "Tripura");
+				op.Add("Uttar-Pradesh", "Uttar Pradesh");
+				op.Add("Uttarakhand", "Uttarakhand");
+				op.Add("West-Bengal", "West Bengal");
 				return op;
 			}
 		}
-
-		public static Dictionary<string, string> CitiesByStateName(string stateName)
+		public static KeyValuePair<string, string> DisplayTitle(string stateName)
+		{
+			stateName = stateName ?? "Tamil Nadu";
+			var IsState = States.ContainsKey(stateName) || States.ContainsValue(stateName);
+			if (IsState) {
+				return new KeyValuePair<string, string>("", string.Format("Areas In My {0} State", stateName));
+			}
+			else {
+				var CityStateName = GetStateByCache()?.FirstOrDefault(x => x.cities.Where(y => y.name?.ToLower() == stateName?.ToLower()).Any())?.name ?? "your";
+				return new KeyValuePair<string, string>(CityStateName, string.Format("Near by {0} City", CityStateName));
+			}
+			
+		}
+		internal static List<CityStateModel> LoadJson()
 		{
 			List<CityStateModel> op = new List<CityStateModel>();
-			var result = new Dictionary<string, String>();
 			using (StreamReader sr = new StreamReader(System.Web.Hosting.HostingEnvironment.MapPath("~/states-cities.json")))
 			{
 				op = JsonConvert.DeserializeObject<List<CityStateModel>>(sr.ReadToEnd());
 			}
+			return op;
+		}
+		public static Dictionary<string, string> CitiesByStateName(string stateName)
+		{
+			List<CityStateModel> op = GetStateByCache();
+			var result = new Dictionary<string, String>();
 
 			if (op == null || !op.Any())
 				return result;
@@ -87,7 +106,7 @@ namespace Card2cashin
 				var op1 = op.FirstOrDefault(f => f.name.Replace(" ", "-").ToLower() == stateName.ToLower())?.cities;
 				if (op1 != null)
 				{
-					op1.ForEach(a => result.Add($"/cities/credit-card-to-cash-in-{a.name.Replace(" ", "-")}", a.name));
+					op1.ForEach(a => result.Add($"/credit-card-to-cash-in-{a.name.Replace(" ", "-")}", a.name));
 				}
 			}
 			return result;
@@ -97,6 +116,23 @@ namespace Card2cashin
 		{
 			Regex r = new Regex("(?:[^a-zA-Z0-9 ]|(?<=['\"])s)", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Compiled);
 			return r.Replace(input, String.Empty);
+		}
+		public static List<CityStateModel> GetStateByCache()
+		{
+			var CacheKey = "StateJson";
+			ObjectCache cache = MemoryCache.Default;
+
+			if (cache.Contains(CacheKey))
+				return (List<CityStateModel>)cache.Get(CacheKey);
+			else
+			{
+				var availableStocks = Helper.LoadJson();
+				// Store data in the cache    
+				CacheItemPolicy cacheItemPolicy = new CacheItemPolicy();
+				cacheItemPolicy.AbsoluteExpiration = DateTime.Now.AddHours(1.0);
+				cache.Add(CacheKey, availableStocks, cacheItemPolicy);
+				return availableStocks;
+			}
 		}
 	}
 }
