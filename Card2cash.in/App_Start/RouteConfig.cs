@@ -30,7 +30,7 @@ namespace Card2cashin
 
 			routes.MapRoute(
 			name: "state",
-			url: "{controller}/{stateName}",
+			url: "credit-card-to-cash-in-{stateName}",
 			defaults: new { controller = "state", action = "Index", stateName = UrlParameter.Optional }
 		);
 

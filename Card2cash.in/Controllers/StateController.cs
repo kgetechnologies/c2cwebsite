@@ -8,8 +8,7 @@ namespace Card2cashin.Controllers
 {
     public class StateController : Controller
     {
-        // GET: State
-        
+       
         public ActionResult Index(string stateName)
         {
             var prefix = "credit-card-to-cash-in-";

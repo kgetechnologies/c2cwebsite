@@ -60,15 +60,37 @@ namespace Card2cashin
 		public static KeyValuePair<string, string> DisplayTitle(string stateName)
 		{
 			stateName = stateName ?? "Tamil Nadu";
-			var IsState = States.ContainsKey(stateName) || States.ContainsValue(stateName);
-			if (IsState) {
+
+			var IsState = States.Keys.Any(f => f.ToLower() == stateName.ToLower()) || States.Values.Any(f => f.ToLower() == stateName.ToLower());
+			if (IsState)
+			{
 				return new KeyValuePair<string, string>("", string.Format("Areas In My {0} State", stateName));
 			}
-			else {
-				var CityStateName = GetStateByCache()?.FirstOrDefault(x => x.cities.Where(y => y.name?.ToLower() == stateName?.ToLower()).Any())?.name ?? "your";
-				return new KeyValuePair<string, string>(CityStateName, string.Format("Near by {0} City", CityStateName));
+			else
+			{
+				var data = GetStateByCache();
+				var CityStateName = data?.FirstOrDefault(x => x.cities.Any(y => y.name?.ToLower() == stateName?.ToLower()))?.name;
+				if (string.IsNullOrEmpty(CityStateName))
+				{
+					if (data != null)
+					{
+						int len = stateName.Length;
+						do
+						{
+							var searchText = stateName.ToLower().Clone().ToString().Substring(0, len--);
+							if (data.Any(x => x.cities.Any(y => y.name.ToLower().StartsWith(searchText))))
+							{
+								CityStateName = data.FirstOrDefault(x => x.cities.Any(y => y.name.ToLower().StartsWith(searchText))).name;
+								return new KeyValuePair<string, string>(CityStateName, string.Format("Servicing area's near by {0}", stateName)); ;
+							}
+						} while (len > 0);
+					}
+
+					CityStateName = "your Area";
+				}
+				return new KeyValuePair<string, string>(CityStateName, string.Format("Servicing area's near by {0}", stateName));
 			}
-			
+
 		}
 		internal static List<CityStateModel> LoadJson()
 		{
@@ -103,7 +125,7 @@ namespace Card2cashin
 					}
 				}
 			});
-				var op1 = op.FirstOrDefault(f => f.name.Replace(" ", "-").ToLower() == stateName.ToLower())?.cities;
+				var op1 = op.FirstOrDefault(f => f.name.Replace(" ", "-").ToLower() == stateName.Replace(" ", "-").ToLower())?.cities;
 				if (op1 != null)
 				{
 					op1.ForEach(a => result.Add($"/credit-card-to-cash-in-{a.name.Replace(" ", "-")}", a.name));
