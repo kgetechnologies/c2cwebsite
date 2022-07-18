@@ -103,6 +103,7 @@
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Controllers\StateController.cs" />
@@ -131,6 +132,7 @@
     <Content Include="images\swipe.png" />
     <Content Include="images\topic6.png" />
     <Content Include="images\topic7.jpg" />
+    <Content Include="site.webmanifest" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -146,9 +148,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Views\Services\CreditCardToCash.cshtml" />
@@ -156,6 +156,7 @@
     <Content Include="Views\Services\InstantCashOnCreditCard.cshtml" />
     <Content Include="Views\State\Index.cshtml" />
     <Content Include="states-cities.json" />
+    <Content Include="Views\Shared\_Seo.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

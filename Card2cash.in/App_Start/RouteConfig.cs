@@ -14,7 +14,7 @@ namespace Card2cashin
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 			//routes.RouteExistingFiles = true;
 
-			routes.IgnoreRoute("");
+		//	routes.IgnoreRoute("");
 
 			routes.MapRoute(
 			name: "contact",
