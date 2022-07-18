@@ -160,8 +160,8 @@
                 <div class="row">
                     @foreach (var eachState in Card2cashin.Helper.CitiesByStateName(SD.Key.IsEmpty()?linkValue: SD.Key))
                     {
-                        <div class="col">
-                            <a class="dropdown-item" href="/state/@eachState.Key">@eachState.Value</a>
+                        <div class="col col-2">
+                            <a class="dropdown-item" title="@eachState.Value" href="/state/@eachState.Key">@eachState.Value</a>
                         </div>
                     }
                 </div>               
@@ -169,8 +169,8 @@
                 <div class="row">
                     @foreach (var eachState in Card2cashin.Helper.States)
                     {
-                        <div class="col">
-                            <a class="dropdown-item" href="/state/@eachState.Key">@eachState.Value</a>
+                        <div class="col col-2">
+                            <a class="dropdown-item" title="@eachState.Value" href="/state/@eachState.Key">@eachState.Value</a>
                         </div>
                     }
                 </div>
