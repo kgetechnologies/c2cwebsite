@@ -33,7 +33,7 @@ namespace Card2cashin.Controllers
 					Frequency = SitemapFrequency.Daily,
 					LastModified = DateTime.UtcNow.AddDays(-1),
 					Priority = 0.8,
-					Url = $"https://www.card2cash.in/{eachState.Key}"
+					Url = $"https://www.card2cash.in/credit-card-to-cash-in-{eachState.Key}"
 				});
 
 				foreach (var eachCity in Helper.CitiesByStateName(eachState.Key))
