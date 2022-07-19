@@ -162,7 +162,7 @@
 							@foreach (var eachState in citiesList)
 							{
 								<div class="col col-3">
-									<a class="dropdown-item" title="@eachState.Value" href="/credit-card-to-cash-in-@eachState.Key">@eachState.Value</a>
+									<a class="dropdown-item" title="@eachState.Value" href="@eachState.Key">@eachState.Value</a>
 								</div>
 							}
 						</div>
@@ -173,7 +173,7 @@
 					@foreach (var eachState in Card2cashin.Helper.States)
 					{
 						<div class="col col-3">
-							<a class="dropdown-item" title="@eachState.Value" href="/credit-card-to-cash-in-@eachState.Key">@eachState.Value</a>
+							<a class="dropdown-item" title="@eachState.Value" href="~/credit-card-to-cash-in-@eachState.Key">@eachState.Value</a>
 						</div>
 					}
 				</div>

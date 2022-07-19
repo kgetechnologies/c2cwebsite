@@ -32,7 +32,7 @@
 		<nav class="navbar navbar-expand-lg">
 			<div class="container">
 				<!-- navbar brand image on navbar -->
-				<a class="navbar-brand mr-auto" href="./index.html"><img src="~/images/header-logo.png" height="60" width="200"></a>
+				<a class="navbar-brand mr-auto" href="/"><img src="~/images/header-logo.png" height="60" width="200"></a>
 
 				<!-- collapse button in navbar -->
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -42,16 +42,16 @@
 				<div class="collapse navbar-collapse" id="Navbar">
 					<ul class="navbar-nav ml-auto">
 						<!-- navbar list -->
-						<li class="nav-item active"><a class="nav-link" href="/Home">Home</a></li>
+						<li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-Services" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Services
 								<i class="fa fa-angle-down" style="margin: 0 0 0 5px; color: black"></i>
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown-Services">
-								<a class="dropdown-item" href="services/CreditCardToCash">CREDIT CARD TO CASH</a>
-								<a class="dropdown-item" href="services/InstantCashOnCreditCard">INSTANT CASH FROM ANY CREDIT CARDS</a>
-								<a class="dropdown-item" href="services/SpotCashOnCreditCard">SPOT CASH ON CREDIT CARD</a>
+								<a class="dropdown-item" href="~/services/CreditCardToCash">CREDIT CARD TO CASH</a>
+								<a class="dropdown-item" href="~/services/InstantCashOnCreditCard">INSTANT CASH FROM ANY CREDIT CARDS</a>
+								<a class="dropdown-item" href="~/services/SpotCashOnCreditCard">SPOT CASH ON CREDIT CARD</a>
 							</div>
 						</li>
 						<li class="nav-item dropdown">
@@ -62,7 +62,7 @@
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown-Products">
 								@foreach (var eachState in Card2cashin.Helper.States)
 								{									
-									<a class="dropdown-item" href="@eachState.Key">@eachState.Value</a>
+									<a class="dropdown-item" href="~/credit-card-to-cash-in-@eachState.Key">@eachState.Value</a>
 								}								
 							</div>
 						</li>
@@ -79,59 +79,50 @@
 	<footer id="footer">
 		<div class="container">
 			<div class="row">
-				<div class=" col-md-4">
+				<div class=" col-md-3">
 					<div class="widget">
 						<h4> <i class="fa fa-phone-square" style="font-size: 18px;"></i>&nbsp;Contact Details</h4>
 						<hr>
-						<p>
-							<i class="fa fa-map-marker">&nbsp;<span class="address-location">All over India</span></i>
-						</p>
-						<p>
-							<i class="fa fa-phone">
-								&nbsp;
-								<a href="tel:+91-94983938 12"><span dir="ltr">+91- 9498 3938 12</span></a>
-							</i>
-
-						</p>
-						<p>
-							<i class="fa fa-whatsapp">
-								&nbsp;
-								<a href="https://wa.me?919498393812"><span dir="ltr">+91- 9498 3938 12</span></a>
-							</i>
-
-						</p>
-						<p>
-							<i class="fa fa-envelope"></i> &nbsp;<a href="mailto:enquiry@card2cash.in">enquiry@card2cash.in</a>
-						</p>
-					</div>
-
-				</div>
-				
-				<div class="col-md-4">
-					<div class="widget">
-						<h4><i class="fa fa-bookmark"></i>&nbsp; Quick Links</h4>
-						<hr>
 						<ul class="link-list">
-							<li><i class="fa fa-chevron-right"></i><a href="./index.html">Home</a></li>
-							<li><i class="fa fa-chevron-right"></i><a href="./about.html">About Us</a> </li>
-							<li><i class="fa fa-chevron-right"></i><a href="/blog.html">Blog</a></li>
-							<li><i class="fa fa-chevron-right"></i><a href="/privacy.html">Privacy</a></li>
-							<li><i class="fa fa-chevron-right"></i><a href="/terms.html">Terms &amp; Conditions</a></li>
-							<li><i class="fa fa-chevron-right"></i><a href="./contact.html">Contact Us</a></li>
+							<li><i class="fa fa-map-marker"></i><span class="address-location">All over India</span></li>
+							<li><i class="fa fa-phone"></i><span dir="ltr"><a href="tel:+91-9498393812">+91- 9498 3938 12</a></span></li>
+							<li><i class="fa fa-whatsapp"></i><span dir="ltr"><a href="https://wa.me?919498393812">+91- 9498 3938 12</a></span></li>
 						</ul>
 					</div>
 
 				</div>
-				<div class="col-md-4">
+
+				<div class="col-md-3">
+					<div class="widget">
+						<h4><i class="fa fa-bookmark"></i>&nbsp; Quick Links</h4>
+						<hr>
+						<ul class="link-list">
+							<li><i class="fa fa-chevron-right"></i><a href="~/home">Home</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="~/about">About Us</a> </li>
+							<li><i class="fa fa-chevron-right"></i><a href="~Contact">Contact Us</a></li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="col-md-3">
+					<div class="widget">
+						<h4><i class="fa fa-bookmark"></i>&nbsp; Services</h4>
+						<hr>
+						<ul class="link-list">
+							<li><i class="fa fa-chevron-right"></i><a href="~/services/SpotCashOnCreditCard">Spot Cash on Credit Card</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="~/services/CreditCardToCash">Credit Card to Cash</a> </li>
+							<li><i class="fa fa-chevron-right"></i><a href="~/services/InstantCashOnCreditCard">Instant cash on Credit Card</a></li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="col-md-3">
 					<div class="widget">
 						<h4><i class="fa fa-envelope-open"></i>&nbsp; Our Presence</h4>
 						<hr>
 						<ul class="link-list">
-							<li><i class="fa fa-chevron-right"></i><a href="./index.html">Just dial</a></li>
-							<li><i class="fa fa-chevron-right"></i><a href="./about.html">India Mart</a> </li>
-							<li><i class="fa fa-chevron-right"></i><a href="/blog.html">Blog</a></li>
-							<li><i class="fa fa-chevron-right"></i><a href="/privacy.html">Privacy</a></li>
-							<li><i class="fa fa-chevron-right"></i><a href="/terms.html">Terms &amp; Conditions</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="https://www.justdial.com/Chennai/Credit-Card-to-Cash-Near-Railway-Station-Guindy/044PXX44-XX44-200801110524-P3R2_BZDET?ref=card2cash.in">Just Dial</a></li>
+							<li><i class="fa fa-chevron-right"></i><a href="https://www.indiamart.com/credit-card-2-cash/cash-credit-facility-service.html?ref=card2cash.in">India Mart</a> </li>
 							<li><i class="fa fa-chevron-right"></i><a href="./contact.html">Contact Us</a></li>
 						</ul>
 					</div>

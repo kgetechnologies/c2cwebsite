@@ -39,5 +39,27 @@ namespace Card2cashin.Controllers
 			ViewBag.Title = "Contact us for Credit Card to Cash| Contact us for Instant Cash on any Credit Card| Contact us for Spot Cash on Credit Card| Contact us for Credit Card to Cash| Contact us for Card to Cash";
 			return View();
 		}
+
+		public ActionResult Error()
+		{
+			ViewBag.DisplayName = "Error";
+			ViewBag.LinkValue = "Error";
+
+			ViewBag.CanonicalUri = "home/error";
+			ViewBag.desc = "Error page on Credit card to Cash, card2cash.in error page";
+			ViewBag.Title = "Credit card to cash Error page, card2cash.in error page";
+			return View();
+		}
+
+		public ActionResult NotFound()
+		{
+			ViewBag.DisplayName = "Not Found";
+			ViewBag.LinkValue = "Not Found";
+
+			ViewBag.CanonicalUri = "home/notfound";
+			ViewBag.desc = "Not Found page on Credit card to Cash, card2cash.in Not Found page";
+			ViewBag.Title = "Credit card to cash Not Found page, card2cash.in Not Found page";
+			return View();
+		}
 	}
 }

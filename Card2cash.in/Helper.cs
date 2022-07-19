@@ -112,23 +112,28 @@ namespace Card2cashin
 			if (!string.IsNullOrEmpty(stateName))
 			{
 				op.ForEach(f =>
-			{
-				f.name = RemoveSpecialCharacters(f.name);
-				if (f.name.Replace(" ", "-").ToLower() == stateName.ToLower())
 				{
-					if (f.cities != null && f.cities.Any())
+					f.name = RemoveSpecialCharacters(f.name);
+					if (f.name.Replace(" ", "-").ToLower() == stateName.ToLower())
 					{
-						f.cities.ForEach(c =>
+						if (f.cities != null && f.cities.Any())
 						{
-							c.name = RemoveSpecialCharacters(c.name);
-						});
+							f.cities.ForEach(c =>
+							{
+								c.name = RemoveSpecialCharacters(c.name);
+							});
+						}
 					}
-				}
-			});
+				});
+
 				var op1 = op.FirstOrDefault(f => f.name.Replace(" ", "-").ToLower() == stateName.Replace(" ", "-").ToLower())?.cities;
 				if (op1 != null)
 				{
-					op1.ForEach(a => result.Add($"/credit-card-to-cash-in-{a.name.Replace(" ", "-")}", a.name));
+					op1.ForEach(a => {
+						var key = $"/credit-card-to-cash-in-{a.name.Replace(" ", "-")}";
+						if (!result.ContainsKey(key))
+							result.Add(key, a.name);
+					});
 				}
 			}
 			return result;

@@ -106,6 +106,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Controllers\sitemapController.cs" />
     <Compile Include="Controllers\StateController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -132,6 +133,7 @@
     <Content Include="images\swipe.png" />
     <Content Include="images\topic6.png" />
     <Content Include="images\topic7.jpg" />
+    <Content Include="Robots.txt" />
     <Content Include="site.webmanifest" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -148,7 +150,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\sitemap\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Views\Services\CreditCardToCash.cshtml" />
@@ -157,6 +161,8 @@
     <Content Include="Views\State\Index.cshtml" />
     <Content Include="states-cities.json" />
     <Content Include="Views\Shared\_Seo.cshtml" />
+    <Content Include="Views\Home\Error.cshtml" />
+    <Content Include="Views\Home\NotFound.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
