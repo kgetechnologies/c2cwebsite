@@ -11,26 +11,42 @@ namespace Card2cashin.Controllers
         // GET: Services
         public ActionResult Index()
         {
-            ViewBag.DisplayName = "Credit Card to Cash Support & Services";
-            ViewBag.LinkValue = "";
-
-            ViewBag.CanonicalUri = "About";
-            ViewBag.desc = "About Credit card to Cash service, About Cheap card to cash, About credit card to instant cash, About credit card to Spot cash, About card swipe to cash, About Spot Cash on Credit Card, About Credit Card to Cash, About Card to Cash, About Instant Card to Cash, About Master Card to Cash, About Visa Card to Cash, About Amex Card to Cash";
-            ViewBag.Title = "About Credit Card to Cash| About Instant Cash on any Credit Card| About Spot Cash on Credit Card| About Credit Card to Cash| About Card to Cash";
-
-            return View("CreditCardToCash");
+          return  Redirect("/CreditCardToCash");
         }
         public ActionResult CreditCardToCash()
         {
+            ViewBag.DisplayName = "Credit Card to Cash Support & Services";
+            ViewBag.LinkValue = "";
+
+            ViewBag.CanonicalUri = "Services on ";
+            ViewBag.desc = "Services on  Instant Cash on Credit Card | Services on  Spot Cash on Credit Card | Services on  Credit Card to Cash | Services on  Cash on Credit card";
+            ViewBag.Title = "Services on  Instant Cash | Services on  Spot Cash | Services on  Credit Card to Cash | Services on  Cash on Credit Card";
+
+
+
             return View("CreditCardToCash");
         }
 
         public ActionResult InstantCashOnCreditCard()
         {
+            ViewBag.DisplayName = "Instant Cash on Credit Card";
+            ViewBag.LinkValue = "";
+
+            ViewBag.CanonicalUri = "/services/InstantCashOnCreditCard";
+            ViewBag.desc = "Instant Cash on Credit Card | Instant Cash on Card | Credit Card Instant Cash | Card to Instant Cash";
+            ViewBag.Title = "Instant Cash on Credit Card | Instant Cash on Card | Credit Card Instant Cash | Card to Instant Cash";
+
             return View("InstantCashOnCreditCard");
         }
         public ActionResult SpotCashOnCreditCard()
         {
+            ViewBag.DisplayName = "Spot Cash on Credit Card";
+            ViewBag.LinkValue = "";
+
+            ViewBag.CanonicalUri = "/services/InstantCashOnCreditCard";
+            ViewBag.desc = "Spot Cash on Credit Card | Spot Cash on Card | Credit Card Spot Cash | Card to Spot Cash";
+            ViewBag.Title = "Spot Cash on Credit Card | Spot Cash on Card | Credit Card Spot Cash | Card to Spot Cash";
+            
             return View("SpotCashOnCreditCard");
         }
 
