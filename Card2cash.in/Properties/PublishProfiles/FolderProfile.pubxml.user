@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>E:\git\c2cDynamicBlog\Card2cash.in\bin\app.publish\</_PublishTargetUrl>
+    <History>True|2022-07-27T06:34:02.7613723Z;True|2022-07-27T12:01:44.8799181+05:30;True|2022-07-27T12:00:20.8969460+05:30;True|2022-07-27T11:56:33.3608124+05:30;True|2022-07-27T11:55:42.4717015+05:30;True|2022-07-20T01:52:14.8168287+05:30;True|2022-07-20T01:48:57.1656123+05:30;True|2022-07-20T01:48:03.9140472+05:30;True|2022-07-20T01:46:08.1234908+05:30;True|2022-07-20T01:41:08.8938690+05:30;True|2022-07-20T01:37:02.3661729+05:30;True|2022-07-20T01:33:14.2904328+05:30;True|2022-07-20T01:22:15.9959906+05:30;True|2022-07-19T07:51:56.7772318+05:30;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/Card2cashin.dll">
+      <publishTime>07/27/2022 12:04:02</publishTime>
+    </File>
+    <File Include="bin/Card2cashin.pdb">
+      <publishTime>07/27/2022 12:04:02</publishTime>
+    </File>
+    <File Include="bin/dotless.AspNet.dll">
+      <publishTime>08/09/2018 01:28:16</publishTime>
+    </File>
+    <File Include="bin/dotless.Core.dll">
+      <publishTime>08/09/2018 01:28:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Bcl.AsyncInterfaces.dll">
+      <publishTime>10/23/2021 05:12:08</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>07/09/2020 03:22:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <publishTime>10/23/2021 05:18:04</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Extensions.DependencyInjection.dll">
+      <publishTime>10/23/2021 05:18:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/12/2022 00:39:46</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/18/2021 01:33:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>05/19/2020 07:21:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>05/19/2020 07:21:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>05/19/2020 07:10:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>05/19/2020 07:22:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>05/19/2020 07:22:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>05/19/2020 07:10:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>05/19/2020 07:17:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>05/19/2020 07:21:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>05/19/2020 07:21:58</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>05/19/2020 07:19:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>05/19/2020 07:19:32</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>05/19/2020 07:20:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>05/19/2020 07:10:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>12/05/2017 07:06:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>12/05/2017 07:06:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
+      <publishTime>05/19/2020 07:10:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>05/19/2020 07:10:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Buffers.dll">
+      <publishTime>07/19/2017 22:31:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>05/16/2018 01:59:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Memory.dll">
+      <publishTime>04/18/2019 04:54:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Numerics.Vectors.dll">
+      <publishTime>07/19/2017 22:31:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>05/16/2018 01:59:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Runtime.CompilerServices.Unsafe.dll">
+      <publishTime>11/15/2019 22:07:58</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>11/30/2018 05:09:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
+      <publishTime>06/19/2019 00:38:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>05/19/2020 07:20:06</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>05/19/2020 07:20:06</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>05/19/2020 07:10:26</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>05/19/2020 07:22:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>05/19/2020 07:22:02</publishTime>
+    </File>
+    <File Include="bin/System.Runtime.CompilerServices.Unsafe.dll">
+      <publishTime>10/23/2021 05:10:18</publishTime>
+    </File>
+    <File Include="bin/System.Threading.Tasks.Extensions.dll">
+      <publishTime>02/19/2020 15:35:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>05/28/2022 05:11:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>05/28/2022 05:12:20</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 20:56:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.Less.dll">
+      <publishTime>11/13/2019 19:18:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>05/28/2022 05:12:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>05/28/2022 05:12:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>05/28/2022 05:12:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>05/28/2022 05:12:50</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>01/23/2014 19:27:34</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>07/12/2022 11:50:40</publishTime>
+    </File>
+    <File Include="css/product.css">
+      <publishTime>07/12/2022 11:49:14</publishTime>
+    </File>
+    <File Include="css/services.css">
+      <publishTime>07/12/2022 11:49:14</publishTime>
+    </File>
+    <File Include="css/style.css">
+      <publishTime>07/12/2022 11:49:14</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>07/12/2022 11:50:40</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/12/2022 11:54:57</publishTime>
+    </File>
+    <File Include="images/about.png">
+      <publishTime>07/12/2022 11:49:14</publishTime>
+    </File>
+    <File Include="images/blog1.jpg">
+      <publishTime>07/12/2022 11:49:14</publishTime>
+    </File>
+    <File Include="images/header-logo.png">
+      <publishTime>07/12/2022 11:49:14</publishTime>
+    </File>
+    <File Include="images/Koala.jpg">
+      <publishTime>07/12/2022 11:49:14</publishTime>
+    </File>
+    <File Include="images/servicess.jpg">
+      <publishTime>07/12/2022 11:49:14</publishTime>
+    </File>
+    <File Include="images/slide1.jpg">
+      <publishTime>07/12/2022 11:49:14</publishTime>
+    </File>
+    <File Include="images/slide2.png">
+      <publishTime>07/12/2022 11:49:14</publishTime>
+    </File>
+    <File Include="images/slide3.png">
+      <publishTime>07/12/2022 11:49:14</publishTime>
+    </File>
+    <File Include="images/swipe.png">
+      <publishTime>07/12/2022 11:49:14</publishTime>
+    </File>
+    <File Include="images/topic6.png">
+      <publishTime>07/12/2022 11:49:14</publishTime>
+    </File>
+    <File Include="images/topic7.jpg">
+      <publishTime>07/12/2022 11:49:14</publishTime>
+    </File>
+    <File Include="Robots.txt">
+      <publishTime>07/19/2022 06:46:31</publishTime>
+    </File>
+    <File Include="site.webmanifest">
+      <publishTime>07/19/2022 01:43:10</publishTime>
+    </File>
+    <File Include="states-cities.json">
+      <publishTime>07/13/2022 00:05:26</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>07/19/2022 03:25:31</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>07/19/2022 06:22:59</publishTime>
+    </File>
+    <File Include="Views/Home/Error.cshtml">
+      <publishTime>07/27/2022 12:00:41</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>07/19/2022 04:50:05</publishTime>
+    </File>
+    <File Include="Views/Home/NotFound.cshtml">
+      <publishTime>07/19/2022 05:32:51</publishTime>
+    </File>
+    <File Include="Views/Services/CreditCardToCash.cshtml">
+      <publishTime>07/19/2022 05:52:54</publishTime>
+    </File>
+    <File Include="Views/Services/InstantCashOnCreditCard.cshtml">
+      <publishTime>07/12/2022 20:58:00</publishTime>
+    </File>
+    <File Include="Views/Services/SpotCashOnCreditCard.cshtml">
+      <publishTime>07/12/2022 20:57:54</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>07/12/2022 11:50:40</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>07/19/2022 05:58:28</publishTime>
+    </File>
+    <File Include="Views/Shared/_Seo.cshtml">
+      <publishTime>07/19/2022 04:51:23</publishTime>
+    </File>
+    <File Include="Views/State/Index.cshtml">
+      <publishTime>07/19/2022 04:40:29</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>07/12/2022 11:54:57</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>07/12/2022 11:50:40</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>07/27/2022 12:04:02</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
