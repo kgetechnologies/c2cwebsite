@@ -126,7 +126,6 @@
     <Content Include="css\product.css" />
     <Content Include="css\services.css" />
     <Content Include="css\style.css" />
-    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\about.png" />
@@ -142,6 +141,7 @@
     <Content Include="images\topic7.jpg" />
     <Content Include="Robots.txt" />
     <Content Include="site.webmanifest" />
+    <Content Include="sitemap.xml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
