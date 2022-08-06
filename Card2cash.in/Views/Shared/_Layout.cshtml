@@ -2,174 +2,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Required meta tags always come first -->
-@Html.Partial("_Seo")
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Required meta tags always come first -->
+    @Html.Partial("_Seo")
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-	<!-- fontawsome w3school link -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- fontawsome w3school link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<!-- local CSS -->
-	<link rel="stylesheet" href="~/css/style.css">
+    <!-- local CSS -->
+    <link rel="stylesheet" href="~/css/style.css">
 
-	<!-- material icon  -->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- material icon  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
 
 
-	<header id="header">
-		<div class="site-top">
-			<div class="site-text">
-				<span> <i class='fa fa-phone'></i><a class="site-text-tel" href="tel:+91- 9498 3938 12">+91- 9498 3938 12</a></span>
-				&nbsp; <span>|</span> &nbsp;
-				<span><i class="fa fa-envelope"></i><a class="site-text-email" href="mailto:enquiry@card2cash.in">enquiry@card2cash.in</a></span>
-			</div>
-		</div>
-		<!-- navbar for webpage -->
-		<nav class="navbar navbar-expand-lg">
-			<div class="container">
-				<!-- navbar brand image on navbar -->
-				<a class="navbar-brand mr-auto" href="/"><img src="~/images/header-logo.png" height="60" width="200" alt="Credit Card to Cash"></a>
+    <header id="header">
+        <div class="site-top">
+            <div class="site-text">
+                <span> <i class='fa fa-phone'></i><a class="site-text-tel" href="tel:+91- 9498 3938 12">+91- 9498 3938 12</a></span>
+                &nbsp; <span>|</span> &nbsp;
+                <span><i class="fa fa-envelope"></i><a class="site-text-email" href="mailto:enquiry@card2cash.in">enquiry@card2cash.in</a></span>
+            </div>
+        </div>
+        <!-- navbar for webpage -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- navbar brand image on navbar -->
+                <a class="navbar-brand mr-auto" href="/"><img src="~/images/header-logo.png" height="60" width="200" alt="Credit Card to Cash"></a>
 
-				<!-- collapse button in navbar -->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+                <!-- collapse button in navbar -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-				<div class="collapse navbar-collapse" id="Navbar">
-					<ul class="navbar-nav ml-auto">
-						<!-- navbar list -->
-						<li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-Services" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Services
-								<i class="fa fa-angle-down" style="margin: 0 0 0 5px; color: black"></i>
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown-Services">
-								<a class="dropdown-item" href="~/services/CreditCardToCash">CREDIT CARD TO CASH</a>
-								<a class="dropdown-item" href="~/services/InstantCashOnCreditCard">INSTANT CASH FROM ANY CREDIT CARDS</a>
-								<a class="dropdown-item" href="~/services/SpotCashOnCreditCard">SPOT CASH ON CREDIT CARD</a>
-							</div>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-Products" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Coverages
-								<i class="fa fa-angle-down" style="margin: 0 0 0 5px; color: black"></i>
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown-Products">
-								@foreach (var eachState in Card2cashin.Helper.States)
-								{
-									<a class="dropdown-item" href="~/credit-card-to-cash-in-@eachState.Key">@eachState.Value</a>
-								}
-							</div>
-						</li>
-						<li class="nav-item"><a class="nav-link" href="~/about">About</a></li>
-						<li class="nav-item"><a class="nav-link" href="~/contact">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
-	@RenderBody()
+                <div class="collapse navbar-collapse" id="Navbar">
+                    <ul class="navbar-nav ml-auto">
+                        <!-- navbar list -->
+                        <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-Services" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Services
+                                <i class="fa fa-angle-down" style="margin: 0 0 0 5px; color: black"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown-Services">
+                                <a class="dropdown-item" href="~/services/CreditCardToCash">CREDIT CARD TO CASH</a>
+                                <a class="dropdown-item" href="~/services/InstantCashOnCreditCard">INSTANT CASH FROM ANY CREDIT CARDS</a>
+                                <a class="dropdown-item" href="~/services/SpotCashOnCreditCard">SPOT CASH ON CREDIT CARD</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-Products" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Coverages
+                                <i class="fa fa-angle-down" style="margin: 0 0 0 5px; color: black"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown-Products">
+                                @foreach (var eachState in Card2cashin.Helper.States)
+                                {
+                                    <a class="dropdown-item" href="~/credit-card-to-cash-in-@eachState.Key">@eachState.Value</a>
+                                }
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="~/about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="~/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    @RenderBody()
 
-<div class="d-none hide">
-	<!-- SEO Starts -->
-	<h1>Credit Card to Cash</h1>
-	<h2>Instant Cash on any Credit Card</h2>
-	<h3>Spot Cash on Credit Card</h3>
-	<h4>Credit Card to Spot Cash</h4>
-	<h4>Card to Cash</h4>
-</div>
+    <div class="d-none hide">
+        <!-- SEO Starts -->
+        <h1>Credit Card to Cash</h1>
+        <h2>Instant Cash on any Credit Card</h2>
+        <h3>Spot Cash on Credit Card</h3>
+        <h4>Credit Card to Spot Cash</h4>
+        <h4>Card to Cash</h4>
+    </div>
 
-	<footer id="footer">
-		<div class="container">
-			<div class="row">
-				<div class=" col-md-3">
-					<div class="widget">
-						<h4> <i class="fa fa-phone-square" style="font-size: 18px;"></i>&nbsp;Contact Details</h4>
-						<hr>
-						<ul class="link-list">
-							<li><i class="fa fa-map-marker"></i><span class="address-location">All over India</span></li>
-							<li><i class="fa fa-phone"></i><span dir="ltr"><a href="tel:+91-9498393812">+91- 9498 3938 12</a></span></li>
-							<li><i class="fa fa-whatsapp"></i><span dir="ltr"><a href="https://wa.me?919498393812">+91- 9498 3938 12</a></span></li>
-						</ul>
-					</div>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-3">
+                    <div class="widget">
+                        <h4> <i class="fa fa-phone-square" style="font-size: 18px;"></i>&nbsp;Contact Details</h4>
+                        <hr>
+                        <ul class="link-list">
+                            <li><i class="fa fa-map-marker"></i><span class="address-location">All over India</span></li>
+                            <li><i class="fa fa-phone"></i><span dir="ltr"><a href="tel:+91-9498393812">+91- 9498 3938 12</a></span></li>
+                            <li><i class="fa fa-whatsapp"></i><span dir="ltr"><a href="https://wa.me?919498393812">+91- 9498 3938 12</a></span></li>
+                        </ul>
+                    </div>
 
-				</div>
+                </div>
 
-				<div class="col-md-3">
-					<div class="widget">
-						<h4><i class="fa fa-bookmark"></i>&nbsp; Quick Links</h4>
-						<hr>
-						<ul class="link-list">
-							<li><i class="fa fa-chevron-right"></i><a href="~/home">Home</a></li>
-							<li><i class="fa fa-chevron-right"></i><a href="~/about">About Us</a> </li>
-							<li><i class="fa fa-chevron-right"></i><a href="~/Contact">Contact Us</a></li>
-						</ul>
-					</div>
+                <div class="col-md-3">
+                    <div class="widget">
+                        <h4><i class="fa fa-bookmark"></i>&nbsp; Quick Links</h4>
+                        <hr>
+                        <ul class="link-list">
+                            <li><i class="fa fa-chevron-right"></i><a href="~/home">Home</a></li>
+                            <li><i class="fa fa-chevron-right"></i><a href="~/about">About Us</a> </li>
+                            <li><i class="fa fa-chevron-right"></i><a href="~/Contact">Contact Us</a></li>
+                        </ul>
+                    </div>
 
-				</div>
-				<div class="col-md-3">
-					<div class="widget">
-						<h4><i class="fa fa-bookmark"></i>&nbsp; Services</h4>
-						<hr>
-						<ul class="link-list">
-							<li><i class="fa fa-chevron-right"></i><a href="~/services/SpotCashOnCreditCard">Spot Cash on Credit Card</a></li>
-							<li><i class="fa fa-chevron-right"></i><a href="~/services/CreditCardToCash">Credit Card to Cash</a> </li>
-							<li><i class="fa fa-chevron-right"></i><a href="~/services/InstantCashOnCreditCard">Instant cash on Credit Card</a></li>
-						</ul>
-					</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="widget">
+                        <h4><i class="fa fa-bookmark"></i>&nbsp; Services</h4>
+                        <hr>
+                        <ul class="link-list">
+                            <li><i class="fa fa-chevron-right"></i><a href="~/services/SpotCashOnCreditCard">Spot Cash on Credit Card</a></li>
+                            <li><i class="fa fa-chevron-right"></i><a href="~/services/CreditCardToCash">Credit Card to Cash</a> </li>
+                            <li><i class="fa fa-chevron-right"></i><a href="~/services/InstantCashOnCreditCard">Instant cash on Credit Card</a></li>
+                        </ul>
+                    </div>
 
-				</div>
-				<div class="col-md-3">
-					<div class="widget">
-						<h4><i class="fa fa-envelope-open"></i>&nbsp; Our Presence</h4>
-						<hr>
-						<ul class="link-list">
-							<li><i class="fa fa-chevron-right"></i><a target="_blank" href="https://jd.card2cash.in">Just Dial</a></li>
-							<li><i class="fa fa-chevron-right"></i><a target="_blank"href="https://www.indiamart.com/credit-card-2-cash/cash-credit-facility-service.html?ref=card2cash.in">India Mart</a> </li>
-							<li><i class="fa fa-chevron-right"></i><a href="~/contact">Contact Us</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="sub-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="copyright">
-							© 2021 All Rights Reserved. <a>Credit Card to Cash | Instant Cash on any Credit Card</a>
-						</div>
-					</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="widget">
+                        <h4><i class="fa fa-envelope-open"></i>&nbsp; Our Presence</h4>
+                        <hr>
+                        <ul class="link-list">
+                            <li><i class="fa fa-chevron-right"></i><a target="_blank" href="https://jd.card2cash.in">Just Dial</a></li>
+                            <li><i class="fa fa-chevron-right"></i><a target="_blank"href="https://www.indiamart.com/credit-card-2-cash/cash-credit-facility-service.html?ref=card2cash.in">India Mart</a> </li>
+                            <li><i class="fa fa-chevron-right"></i><a href="~/contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="copyright">
+                            © 2021 All Rights Reserved. <a>Credit Card to Cash | Instant Cash on any Credit Card</a>
+                        </div>
+                    </div>
 
-					<div class="col-md-6 ">
-						<ul class="social-icon pull-right">
-							<li><a href="https://www.facebook.com/creditcardtospotcash" target="_blank"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="https://twitter.com/CardToCash" target="_blank"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="https://www.linkedin.com/company/credit-card-to-cash/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-							<li><a href="https://www.youtube.com/watch?v=xzx7UbZC-PU" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
-							<li><a href="https://www.instagram.com/card2cash.in" target="_blank"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="https://in.pinterest.com/card2cash/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-							<li><a href="https://creditcardtocash.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li>							
-							<li><a href="https://wa.me?919498393812" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                    <div class="col-md-6 ">
+                        <ul class="social-icon pull-right">
+                            <li><a href="https://www.facebook.com/creditcardtospotcash" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/CardToCash" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/credit-card-2-cash/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.youtube.com/watch?v=xzx7UbZC-PU" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                            <li><a href="https://www.instagram.com/card2cash.in" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://in.pinterest.com/card2cash/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="https://creditcardtocash.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+                            <li><a href="https://credit-card-to-cash.blogspot.com/" target="_blank"><i class="fa fa-blogger"></i></a></li>
+                            <li><a href="https://wa.me?919498393812" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
 
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 </body>
