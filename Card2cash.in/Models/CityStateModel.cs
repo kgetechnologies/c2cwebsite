@@ -2,19 +2,21 @@
 
 namespace Card2cashin.Models
 {  
-    public class City
-    {
-        public string name { get; set; }
-        public string id { get; set; }
+    public class City: LocationBase
+	{
+      
     }
 
-    public class CityStateModel
-    {
-        //Root myDeserializedClass = JsonConvert.DeserializeObject<List<CityStateModel>>(myJsonResponse);
-        public string id { get; set; }
-        public string name { get; set; }
+    public class CityStateModel: LocationBase
+	{
         public string state_code { get; set; }
         public List<City> cities { get; set; }
     }
+
+    public class LocationBase
+    {
+		public string name { get; set; }
+		public string id { get; set; }
+	}
 
 }

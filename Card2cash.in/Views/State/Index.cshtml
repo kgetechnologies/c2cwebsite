@@ -2,7 +2,7 @@
 @{
     var displayName = ViewBag.DisplayName;
     var linkValue = ViewBag.LinkValue;    
-    var url = $"https://cdn.card2cash.in/main/LocationBanner/{ViewBag.Id}.jpg";
+    var url = $"https://cdn.card2cash.in/LocationBanner/{ViewBag.Id}.jpg";
 
 }
 <div class="contact-page">
@@ -17,7 +17,7 @@
                             </h1>
                         </div>
                         <img src="@url"
-							 onerror="this.onerror=null; this.src='https://cdn.card2cash.in/main/LocationBanner/default.jpg'"
+							 onerror="this.onerror=null; this.src='https://cdn.card2cash.in/LocationBanner/default.jpg'"
 							 class="responsive"
                              alt="Credit Card to Cash in @displayName" title="Credit Card to Cash in @displayName" />
                     </div>
