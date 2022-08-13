@@ -13,7 +13,7 @@ namespace Card2cashin.Controllers
             }
             ViewBag.DisplayName = stateName?.Replace("-", " ");
             ViewBag.LinkValue = stateName?.Replace(" ", "-");
-
+            ViewBag.Id = Helper.GetIdByName(stateName);
             ViewBag.CanonicalUri = "credit-card-to-cash-in-" + ViewBag.LinkValue;
 
             ViewBag.desc = string.Format("Credit card to Cash in {0}, Cheap card to cash service in {0},credit card to instant cash in {0},credit card to Spot cash in {0}", ViewBag.DisplayName);

@@ -1,22 +1,26 @@
 ﻿@using System.Linq
 @{
-	var displayName = ViewBag.DisplayName;
-	var linkValue = ViewBag.LinkValue;
+    var displayName = ViewBag.DisplayName;
+    var linkValue = ViewBag.LinkValue;    
+    var url = $"https://cdn.card2cash.in/main/LocationBanner/{ViewBag.Id}.jpg";
+
 }
 <div class="contact-page">
 	<section>
 		<div class="col-md-12">
 			<div class="container mt-2">
 				<article>
-					<div class="post-image">
-						<div class="post-heading">
-							<h1>
-								Credit Card to Cash in @displayName
-							</h1>
-						</div>
-						<img src="https://cdn.card2cash.in/uploads/topics/16575883749933.jpg" class="responsive"
-							 alt="Credit Card to Cash in @displayName" title="Credit Card to Cash in @displayName" />
-					</div>
+                    <div class="post-image">
+                        <div class="post-heading">
+                            <h1>
+                                Credit Card to Cash in @displayName
+                            </h1>
+                        </div>
+                        <img src="@url"
+							 onerror="this.onerror=null; this.src='https://cdn.card2cash.in/main/LocationBanner/default.jpg'"
+							 class="responsive"
+                             alt="Credit Card to Cash in @displayName" title="Credit Card to Cash in @displayName" />
+                    </div>
 					<h1 style="box-sizing: border-box; margin-right: 0px; margin-bottom: 20px; margin-left: 0px; line-height: 46px; color: rgb(73, 73, 73); font-size: 40px; transition-timing-function: ease-in-out; transition-duration: 0.2s; padding: 0px;">
 						<span style="background-color: white; color: inherit; font-family: inherit; font-size: 2.5rem;">We </span>
 						<font color="#00ff00" style="background-color: white; font-family: inherit; font-size: 2.5rem;">Encash </font>
@@ -153,7 +157,7 @@
 				</article>
 				@{
 					var SD = (KeyValuePair<string, string>)Helper.DisplayTitle(displayName);
-					Dictionary<string, string> citiesList = Card2cashin.Helper.CitiesByStateName(SD.Key.IsEmpty() ? linkValue : SD.Key);
+					Dictionary<string, Card2cashin.Models.City> citiesList = Card2cashin.Helper.CitiesByStateName(SD.Key.IsEmpty() ? linkValue : SD.Key);
 
 					if (citiesList != null && citiesList.Any())
 					{
@@ -162,7 +166,7 @@
 							@foreach (var eachState in citiesList)
 							{
 								<div class="col col-3">
-									<a class="dropdown-item" title="@eachState.Value" href="@eachState.Key">@eachState.Value</a>
+									<a class="dropdown-item" title="@eachState.Value.name" href="@eachState.Key">@eachState.Value.name</a>
 								</div>
 							}
 						</div>

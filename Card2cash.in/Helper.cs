@@ -101,10 +101,18 @@ namespace Card2cashin
 			}
 			return op;
 		}
-		public static Dictionary<string, string> CitiesByStateName(string stateName)
+		public static string GetIdByName(string stateName)
 		{
 			List<CityStateModel> op = GetStateByCache();
-			var result = new Dictionary<string, String>();
+			var id = op?.FirstOrDefault(f => f.name.Replace(" ", "-").ToLower() == stateName.Replace(" ", "-").ToLower())?.id ?? "";
+			if (string.IsNullOrEmpty(id))
+				id = op.SelectMany(x => x.cities?.Where(f => f.name?.Replace(" ", "-").ToLower() == stateName?.Replace(" ", "-").ToLower()))?.FirstOrDefault()?.id ?? "";
+			return id;
+		}
+			public static Dictionary<string, City> CitiesByStateName(string stateName)
+		{
+			List<CityStateModel> op = GetStateByCache();
+			var result = new Dictionary<string, City>();
 
 			if (op == null || !op.Any())
 				return result;
@@ -132,7 +140,7 @@ namespace Card2cashin
 					op1.ForEach(a => {
 						var key = $"/credit-card-to-cash-in-{a.name.Replace(" ", "-")}";
 						if (!result.ContainsKey(key))
-							result.Add(key, a.name);
+							result.Add(key, a);
 					});
 				}
 			}
