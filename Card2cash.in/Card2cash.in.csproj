@@ -130,6 +130,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="images\about.png" />
     <Content Include="images\blog1.jpg" />
+    <Content Include="images\blogger.svg" />
     <Content Include="images\header-logo.png" />
     <Content Include="images\Koala.jpg" />
     <Content Include="images\servicess.jpg" />
