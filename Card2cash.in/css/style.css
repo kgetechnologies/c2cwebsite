@@ -8,7 +8,7 @@
 text-align:center;
 }
 .site-top {
-    background: #0cbaa4;
+    background: #0cbaa4 !important;
     text-align: center;
 }
 .cash-pie {
@@ -1066,7 +1066,7 @@ ul li {
         text-align: none !important;
     }
     .site-top {
-        background: #0cbaa4;
+        background: #0cbaa4 !important;
         text-align: none !important;
     }
 

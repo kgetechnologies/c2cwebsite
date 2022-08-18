@@ -6,7 +6,7 @@
 }
 
 .site-top {
-    background: #0cbaa4;
+    background: #0cbaa4 !important;
 }
 
 .site-text {
@@ -338,7 +338,7 @@ ul li {
     }
 
     .site-top {
-        background: #0cbaa4;
+        background: #0cbaa4 !important;
     }
 
     .site-text {
