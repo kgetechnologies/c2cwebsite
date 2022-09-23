@@ -171,6 +171,7 @@
     <Content Include="Views\Shared\_Seo.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Home\NotFound.cshtml" />
+    <Content Include="Views\Shared\_hTagSeo.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
