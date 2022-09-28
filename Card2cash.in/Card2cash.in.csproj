@@ -123,6 +123,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\mobile.css" />
     <Content Include="css\product.css" />
     <Content Include="css\services.css" />
     <Content Include="css\style.css" />

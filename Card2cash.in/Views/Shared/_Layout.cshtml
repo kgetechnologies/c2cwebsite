@@ -24,59 +24,89 @@
 
 	<header id="header">
 		<div class="d-flex site-top site-text">
-			<span> <i class='fa fa-phone'></i><a class="site-text-tel" href="tel:+91- 9498 3938 12">+91- 9498 3938 12</a></span>
+			<span> <i class='fa fa-phone'></i><a class="site-text-tel" href="tel:+91-9498393812">+91- 9498 3938 12</a></span>
+
 			<span class="cash-pie">|</span>
-			<span> <i class='fab fa-whatsapp'></i><a class="site-text-tel" target="_blank" href="https://wa.me/919498393812?text=Reg%20Credit%20Card%20To%20Cash">+91- 9498 3938 12</a></span>
+			<span>
+				<i class='fab fa-whatsapp'></i><a class="site-text-tel"
+										  href="https://wa.me/919498393812?text=Credit Card to Cash" target="_blank">+91- 9498 3938 12</a>
+			</span>
+
 			<span class="cash-pie">|</span>
 			<span><i class="fa fa-envelope"></i><a class="site-text-email" href="mailto:enquiry@card2cash.in">enquiry@card2cash.in</a></span>
+
 
 		</div>
 		<!-- navbar for webpage -->
 		<nav class="navbar navbar-expand-lg">
 			<div class="container">
 				<!-- navbar brand image on navbar -->
-				<a class="navbar-brand mr-auto" href="/"><img src="https://cdn.card2cash.in/uploads/Logo/Logo.png" height="60" width="200" alt="Credit Card to Cash"></a>
+				<a class="navbar-brand mr-auto" href="/">
+					<img src="https://cdn.card2cash.in/uploads/Logo/Logo.png"
+						 height="60" width="200" alt="Credit Card to Cash">
+				</a>
 
 				<!-- collapse button in navbar -->
-				<button class="navbar-toggler site-top" type="button" data-toggle="collapse" data-target="#Navbar">
-					<span class="fa fa-regular fa-bars"></span>
-				</button>
 
-				<div class="collapse navbar-collapse" id="Navbar">
-					<ul class="navbar-nav ml-auto">
-						<!-- navbar list -->
-						<li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-Services" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Services
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<div class="navbar-nav ms-auto py-0">
+						<a href="/" class="nav-item nav-link active">Home</a>
+
+						<div class="nav-item dropdown">
+							<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+								Product
 								<i class="fa fa-angle-down" style="margin: 0 0 0 5px; color: black"></i>
 							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown-Services">
-								<a class="dropdown-item" href="~/services/CreditCardToCash">CREDIT CARD TO CASH</a>
-								<a class="dropdown-item" href="~/services/InstantCashOnCreditCard">INSTANT CASH FROM ANY CREDIT CARDS</a>
-								<a class="dropdown-item" href="~/services/SpotCashOnCreditCard">SPOT CASH ON CREDIT CARD</a>
+							<div class="dropdown-menu m-0">
+								<a class="dropdown-item" href="/services/CreditCardToCash?utm_medium=seo&utm_source=google&utm_term=credit card to cash">Credit Card to Cash Near me</a>
+								<a class="dropdown-item" href="/services/InstantCashOnCreditCard?utm_medium=seo&utm_source=google&utm_term=credit card to cash">INSTANT CASH FROM ANY CREDIT CARDS</a>
+								<a class="dropdown-item" href="/services/SpotCashOnCreditCard?utm_medium=seo&utm_source=google&utm_term=credit card to cash">SPOT CASH ON CREDIT CARD Near Me</a>
 							</div>
+						</div>
+
 						</li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-Products" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-Products" role="button"
+							   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Coverages
 								<i class="fa fa-angle-down" style="margin: 0 0 0 5px; color: black"></i>
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown-Products">
+								@*<div class="dropdown1">
+									<a class="drop">
+										Andhra Pradesh
+										<i class="fa fa-angle-down" style="margin: 0 0 0 5px; color: white"></i>
+									</a>
+									<div class="dropdown-content">
+										<a href="#">Srikakulam</a>
+										<a href="#">Parvathipuram Manyam</a>
+										<a href="#">Parvathipuram Manyam</a>
+									</div>
+								</div>*@
+
 								@foreach (var eachState in Card2cashin.Helper.States)
 								{
 									var target = "credit-card-to-cash-in-" + @eachState.Key;
-									<a class="dropdown-item" href="~/@target?utm_medium=seo&utm_source=google&utm_term=@target">@eachState.Value</a>
+									<a class="dropdown-item" href="/@target?utm_medium=seo&utm_source=google&utm_term=@target">@eachState.Value</a>
 								}
+
+								<a class="dropdown-item" href="/cheap-Class-3-dsc-in-Arunachal-Pradesh">Arunachal Pradesh</a>
+
+
 							</div>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="~/about">About</a></li>
-						<li class="nav-item"><a class="nav-link" href="~/contact">Contact</a></li>
-					</ul>
+						<li class="nav-item"><a class="nav-link" href="/about?utm_medium=seo&utm_source=google&utm_term=credit card to cash">About</a></li>
+						<li class="nav-item"><a class="nav-link" href="/contact?utm_medium=seo&utm_source=google&utm_term=credit card to cash">Contact</a></li>
+						</ul>
+					</div>
 				</div>
-			</div>
 		</nav>
 	</header>
+
 	@RenderBody()
 
 	<div class="d-none hide">
