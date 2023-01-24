@@ -112,6 +112,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Controllers\sitemapController.cs" />
     <Compile Include="Controllers\StateController.cs" />
@@ -160,6 +161,7 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Views\Image\" />
     <Folder Include="Views\sitemap\" />
   </ItemGroup>
   <ItemGroup>

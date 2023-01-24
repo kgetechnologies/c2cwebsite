@@ -40,7 +40,7 @@ namespace Card2cashin.Controllers
 			ViewBag.DisplayName = stateName?.Replace("-", " ");
 			ViewBag.LinkValue = stateName?.Replace(" ", "-");
 			ViewBag.Id = Helper.GetIdByName(stateName);
-			ViewBag.CanonicalUri = "credit-card-to-cash-in-" + ViewBag.LinkValue;
+			ViewBag.CanonicalUri = ("credit-card-to-cash-in-" + stateName?.Replace(" ", "-")).ToLower();
 
 			ViewBag.desc = string.Format("cash for credit card in {0} | Credit card to Cash in {0}, Cheap card to cash service in {0},credit card to instant cash in {0},credit card to Spot cash in {0}", ViewBag.DisplayName);
 			ViewBag.Title = string.Format("cash for credit card in {0} | Credit Card to Cash in {0} | Spot Cash on Credit Card in {0}", ViewBag.DisplayName);
