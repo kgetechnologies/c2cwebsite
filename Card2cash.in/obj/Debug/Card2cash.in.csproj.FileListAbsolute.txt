@@ -112,3 +112,6 @@ C:\Git\c2cwebsite\Card2cash.in\obj\Debug\Card2cash.in.csproj.CoreCompileInputs.c
 C:\Git\c2cwebsite\Card2cash.in\obj\Debug\Card2cash.in.csproj.CopyComplete
 C:\Git\c2cwebsite\Card2cash.in\obj\Debug\Card2cashin.dll
 C:\Git\c2cwebsite\Card2cash.in\obj\Debug\Card2cashin.pdb
+E:\git\c2cDynamicBlog\Card2cash.in\bin\System.Web.Optimization.dll
+E:\git\c2cDynamicBlog\Card2cash.in\bin\WebGrease.dll
+E:\git\c2cDynamicBlog\Card2cash.in\bin\System.Web.Optimization.xml
