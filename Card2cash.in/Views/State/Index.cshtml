@@ -2,7 +2,6 @@
 @{
 	var displayName = ViewBag.DisplayName;
 	var linkValue = ViewBag.LinkValue;
-	var url = $"https://cdn.card2cash.in/LocationBanner/{ViewBag.Id}.jpg";
 
 	var gaQueryString = "?utm_medium=seo&utm_source=google&utm_term=credit card to cash in " + @displayName;
 }
@@ -50,8 +49,8 @@
 								Credit Card to Cash in @displayName
 							</h1>
 						</div>
-						<img src="@url"
-							 onerror="this.onerror=null; this.src='https://cdn.card2cash.in/LocationBanner/default.jpg'"
+						<img src="data:image/jpeg;base64,@ViewBag.TestImage" 
+							 onerror="this.onerror=null; this.src='https://cdn.card2cash.in/MvcImages/State.jpg'"
 							 class="w-100 responsive"
 							 alt="Credit Card to Cash in @displayName" title="Credit Card to Cash in @displayName" />
 					</div>

@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
+using System.Net;
+using System.Security.Policy;
 using System.Web.Mvc;
 
 namespace Card2cashin.Controllers
@@ -44,9 +48,48 @@ namespace Card2cashin.Controllers
 
 			ViewBag.desc = string.Format("cash for credit card in {0} | Credit card to Cash in {0}, Cheap card to cash service in {0},credit card to instant cash in {0},credit card to Spot cash in {0}", ViewBag.DisplayName);
 			ViewBag.Title = string.Format("cash for credit card in {0} | Credit Card to Cash in {0} | Spot Cash on Credit Card in {0}", ViewBag.DisplayName);
-
+			ViewBag.TestImage = CreateStateBanner(ViewBag.DisplayName, Color.Magenta, 80, 550, 910);
 			//Mon, 22 Jul 2002 11:12:01 GMT
 			return View();
+		}
+
+		const string CdnDomain = "https://cdn.card2cash.in/MvcImages/State.jpg";
+		
+		public string CreateStateBanner(string sText, Color color, int fontSize = 40, int x = 250, int y = 225)
+		{
+			try
+			{
+				using (var client = new WebClient())
+				{
+					var content = client.DownloadData(CdnDomain);
+					using (var stream = new MemoryStream(content))
+					{
+
+						using (Bitmap oBitmap = new Bitmap(Image.FromStream(stream)))
+						{
+							Graphics oGraphic = Graphics.FromImage(oBitmap);
+
+							PointF oPoint = default(PointF);
+							SolidBrush oBrushBlack = new SolidBrush(color);
+							Font oFont = new Font("Arial", fontSize, FontStyle.Bold);
+
+							oPoint = new PointF(x, y);
+							oGraphic.DrawString(sText, oFont, oBrushBlack, oPoint);
+
+							using (MemoryStream memory = new MemoryStream())
+							{
+								oBitmap.Save(memory, System.Drawing.Imaging.ImageFormat.Jpeg);
+								byte[] bytesArray = memory.ToArray();
+								return Convert.ToBase64String(bytesArray, 0, bytesArray.Length);
+							}
+						}
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				return CdnDomain;
+			}			
 		}
 	}
 }
