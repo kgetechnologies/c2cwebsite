@@ -18,7 +18,9 @@ text-align:center;
 }
 
 .site-text {
-    padding: 5px 0px 5px 5px;
+    padding: 5px 5px 5px 5px;
+    font-family: 'Open Sans',Arial,sans-serif;
+    font-size: 55px;
 }
 
 
@@ -210,10 +212,10 @@ ul li {
         font-size: 14px;
         text-align: right;
         background: #303030;
-        border-radius: 1;
+        border-radius: 1px;
         color: white;
         padding: 2px 5px 2px 5px;
-        margin: 0 3px 0 3px0;
+        margin: 0 3px 0 3px 0;
     }
 
 
@@ -573,10 +575,10 @@ ul li {
         font-size: 14px;
         text-align: right;
         background: #303030;
-        border-radius: 1;
+        border-radius: 1px;
         color: white;
         padding: 2px 5px 2px 5px;
-        margin: 0 3px 0 3px0;
+        margin: 0 3px 0 3px 0;
     }
 
 
@@ -1263,7 +1265,7 @@ ul li {
             font-size: 14px;
             text-align: right;
             background: #303030;
-            border-radius: 1;
+            border-radius: 1px;
             color: white;
             padding: 2px 5px 2px 5px;
             margin: 0 3px 0 3px 0;
@@ -1328,7 +1330,7 @@ ul li {
         float: left;
         margin-right: 10px;
         background: #0cbaa4;
-        color: #fff;
+        color: black;
         text-align: center;
     }
 
@@ -1480,7 +1482,7 @@ ul li {
     }
 
     .navbar-toggler {
-        color: white;
+        color: black;
         background: rgb(204, 198, 198);
     }
 
@@ -1512,7 +1514,7 @@ ul li {
         .dropdown-menu a {
             text-decoration: none;
             display: block;
-            color: white;
+            color: black;
             font-size: 14px;
         }
 
@@ -1627,10 +1629,10 @@ ul li {
             font-size: 14px;
             text-align: right;
             background: #303030;
-            border-radius: 1;
+            border-radius: 1px;
             color: white;
             padding: 2px 5px 2px 5px;
-            margin: 0 3px 0 3px0;
+            margin: 0 3px 0 3px 0;
         }
 
 
@@ -1783,7 +1785,7 @@ ul li {
  
         .site-text span, .site-text-tel, .site-text-email, .fa {
             font-size: 15px;
-            color: white;
+            color: black;
         }
 
     .fa {
@@ -1791,7 +1793,7 @@ ul li {
     }
 
     a:hover {
-        color: black;
+        color: #f6f6f6;
         text-decoration: none;
     }
 
@@ -1801,7 +1803,7 @@ ul li {
     }
 
     .navbar-toggler {
-        color: white;
+        color: black;
         background: rgb(204, 198, 198);
     }
 
@@ -1833,7 +1835,7 @@ ul li {
         .dropdown-menu a {
             text-decoration: none;
             display: block;
-            color: white;
+            color: black;
             font-size: 14px;
         }
 
@@ -1860,7 +1862,7 @@ ul li {
     }
 
         #Breadcrumb, .breadcrumb .active {
-            color: white;
+            color: black;
             font-size: 15px;
             font-weight: 300;
         }
@@ -1873,33 +1875,34 @@ ul li {
 
     footer {
         padding: 10px 0 0 0;
-        color: #f8f8f8;
+        color: black;
         background: #0cbaa4;
     }
 
     .widget {
         margin: 0 0 0 0;
         font-family: 'Open Sans',Arial,sans-serif;
+        color:black;
     }
 
     h4 {
         position: relative;
         font-weight: 700;
         margin-bottom: 20px;
-        color: #fff;
+        color: black;
         font-size: 18px;
     }
 
     strong {
         font-size: 14px;
         font-weight: bold;
-        color: white;
+        color: black;
     }
 
     .address-location, a {
         text-decoration: none;
         font-size: 14px;
-        color: white;
+        color: black;
     }
 
         a:hover {
@@ -1915,7 +1918,7 @@ ul li {
         border-radius: 0;
         background: #0cbaa4;
         font-size: 13px;
-        color: white;
+        color: black;
         text-transform: uppercase;
         margin-bottom: 20px;
     }
@@ -1948,10 +1951,10 @@ ul li {
             font-size: 14px;
             text-align: right;
             background: #303030;
-            border-radius: 1;
+            border-radius: 1px;
             color: white;
             padding: 2px 5px 2px 5px;
-            margin: 0 3px 0 3px0;
+            margin: 0 3px 0 3px 0;
         }
 
 

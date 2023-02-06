@@ -15,7 +15,7 @@
 
     .site-text span, .site-text-tel, .site-text-email, .fa {
         font-size: 15px;
-        color: white;
+        color: black;
     }
 
 .fa {
@@ -180,10 +180,10 @@ ul li {
         font-size: 14px;
         text-align: right;
         background: #303030;
-        border-radius: 1;
+        border-radius: 1px;
         color: white;
         padding: 2px 5px 2px 5px;
-        margin: 0 3px 0 3px0;
+        margin: 0 3px 0 3px 0;
     }
 
 
@@ -518,10 +518,10 @@ ul li {
             font-size: 14px;
             text-align: right;
             background: #303030;
-            border-radius: 1;
+            border-radius: 1px;
             color: white;
             padding: 2px 5px 2px 5px;
-            margin: 0 3px 0 3px0;
+            margin: 0 3px 0 3px 0;
         }
 
 
