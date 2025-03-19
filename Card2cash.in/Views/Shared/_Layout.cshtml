@@ -79,7 +79,8 @@
 								@foreach (var eachState in Card2cashin.Helper.States)
 								{
 									var target = "credit-card-to-cash-in-" + @eachState.Key;
-									<a class="dropdown-item" href="/@target?utm_medium=seo&utm_source=google&utm_term=@target">@eachState.Value</a>
+									var param = target.Count() > 59 ? target.Substring(0, 59) : target;
+									<a class="dropdown-item" href="/@target?utm_medium=seo&utm_source=google&utm_term=@param">@eachState.Value</a>
 								}
 
 							</div>
